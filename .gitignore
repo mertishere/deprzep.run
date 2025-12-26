@@ -3,3 +3,4 @@ tmp
 .config/dump
 .config/local.db
 .env
+.release
