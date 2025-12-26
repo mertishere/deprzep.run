@@ -15,6 +15,7 @@ RUN sh scripts/build_linux.sh
 FROM alpine:latest AS production
 WORKDIR /app
 COPY --from=builder /app/bin/app-linux /app/app-linux
+COPY --from=builder /app/static /app/static
 
 RUN apk add --no-cache chromium ttf-freefont nss
 RUN wget -q -t3 'https://packages.doppler.com/public/cli/rsa.8004D9FF50437357.key' -O /etc/apk/keys/cli@doppler-8004D9FF50437357.rsa.pub && \
