@@ -23,7 +23,7 @@ RUN wget -q -t3 'https://packages.doppler.com/public/cli/rsa.8004D9FF50437357.ke
 RUN chmod +x /app/app-linux
 
 
-EXPOSE 80
+EXPOSE 8080
 RUN adduser -D -g '' nonroot
 USER nonroot
 CMD ["doppler", "run", "--", "/app/app-linux"]
