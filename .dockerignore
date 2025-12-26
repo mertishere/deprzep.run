@@ -1,0 +1,7 @@
+tests
+bin
+
+.vscode
+.github
+
+.config/local.db
