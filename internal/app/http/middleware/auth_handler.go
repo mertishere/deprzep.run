@@ -15,9 +15,13 @@ func ValidateSession() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		auth := c.GetHeader("Authorization")
 		parts := strings.Fields(auth)
-		key := parts[0]
+		if len(parts) != 2 {
+			c.Next()
+			return
+		}
 
-		if len(parts) != 2 || !strings.EqualFold(key, "Bearer") {
+		key := parts[0]
+		if !strings.EqualFold(key, "Bearer") {
 			c.Next()
 			return
 		}
