@@ -1,0 +1,5 @@
+bin
+tmp
+.config/dump
+.config/local.db
+.env
