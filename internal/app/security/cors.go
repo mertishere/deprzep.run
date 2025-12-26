@@ -12,7 +12,7 @@ func CORSHandler() gin.HandlerFunc {
 	apiUrl := os.Getenv("API_URL")
 	return cors.New(cors.Config{
 		AllowOrigins:     []string{apiUrl},
-		AllowMethods:     []string{"PUT", "PATCH", "GET", "POST"},
+		AllowMethods:     []string{"PUT", "PATCH", "GET", "POST", "DELETE"},
 		AllowCredentials: true,
 		AllowHeaders:     []string{"Content-Type", "Authorization"},
 		AllowOriginFunc: func(origin string) bool {

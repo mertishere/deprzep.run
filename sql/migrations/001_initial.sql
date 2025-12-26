@@ -18,8 +18,8 @@ CREATE TABLE "release" (
         updated_at text,
         project_id text NOT NULL,
         release text NOT NULL,
-        FOREIGN KEY (user_id) REFERENCES user(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-        FOREIGN KEY (project_id) REFERENCES project(id) ON UPDATE NO ACTION ON DELETE NO ACTION
+        FOREIGN KEY (user_id) REFERENCES user(id) ON UPDATE CASCADE ON DELETE CASCADE,
+        FOREIGN KEY (project_id) REFERENCES project(id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 CREATE TABLE session (
         id text PRIMARY KEY NOT NULL,
