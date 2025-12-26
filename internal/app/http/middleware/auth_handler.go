@@ -14,19 +14,20 @@ import (
 func ValidateSession() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		auth := c.GetHeader("Authorization")
-		split_auth := strings.Split(auth, " ")
-		if len(split_auth) < 2 {
+		parts := strings.Fields(auth)
+		key := parts[0]
+
+		if len(parts) != 2 || !strings.EqualFold(key, "Bearer") {
 			c.Next()
 			return
 		}
 
-		key := split_auth[0]
-		if key != "Bearer" {
+		if len(parts[1]) < 20 {
 			c.Next()
 			return
 		}
 
-		jwt := split_auth[1]
+		jwt := parts[1]
 
 		decodedJwtCookie, err := security.JWTDecode(jwt, os.Getenv("SECRET_JWT_KEY"))
 		if err != nil {
