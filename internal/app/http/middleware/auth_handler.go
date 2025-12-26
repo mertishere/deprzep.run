@@ -3,6 +3,7 @@ package middleware
 import (
 	"context"
 	"os"
+	"strings"
 
 	security "XerWoho/zep.run/internal/app/security"
 	"XerWoho/zep.run/internal/database"
@@ -12,7 +13,21 @@ import (
 
 func ValidateSession() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		jwt := c.GetHeader("Bearer")
+		auth := c.GetHeader("Authorization")
+		split_auth := strings.Split(auth, " ")
+		if len(split_auth) < 2 {
+			c.Next()
+			return
+		}
+
+		key := split_auth[0]
+		if key != "Bearer" {
+			c.Next()
+			return
+		}
+
+		jwt := split_auth[1]
+
 		decodedJwtCookie, err := security.JWTDecode(jwt, os.Getenv("SECRET_JWT_KEY"))
 		if err != nil {
 			c.Next()

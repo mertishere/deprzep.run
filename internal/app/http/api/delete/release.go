@@ -2,7 +2,6 @@ package api_delete
 
 import (
 	"context"
-	"encoding/json"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -33,25 +32,13 @@ func DeleteReleaseRoute(c *gin.Context) {
 	}
 	defer db.Close()
 
-	type DeleteReleaseParams struct {
-		ProjectId string `json:"project_id"`
-		Id        string `json:"id"`
-	}
-
-	var req DeleteReleaseParams
-	err = json.NewDecoder(c.Request.Body).Decode(&req)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{
-			"success": false,
-			"error":   "something went wrong...",
-		})
-		return
-	}
+	releaseId := c.Query("id")
+	projectId := c.Query("project_id")
 
 	queries := database.New(db)
 	ctx := context.Background()
 	project, err := queries.GetProjectById(ctx, database.GetProjectByIdParams{
-		ID:     req.ProjectId,
+		ID:     projectId,
 		UserID: userId,
 	})
 	if err != nil {
@@ -72,8 +59,8 @@ func DeleteReleaseRoute(c *gin.Context) {
 
 	err = queries.DeleteReleaseById(ctx, database.DeleteReleaseByIdParams{
 		UserID:    userId,
-		ProjectID: req.ProjectId,
-		ID:        req.Id,
+		ProjectID: projectId,
+		ID:        releaseId,
 	})
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{

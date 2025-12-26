@@ -2,7 +2,6 @@ package api_delete
 
 import (
 	"context"
-	"encoding/json"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -33,24 +32,12 @@ func DeleteProjectRoute(c *gin.Context) {
 	}
 	defer db.Close()
 
-	type DeleteProjectParams struct {
-		Id string `json:"id"`
-	}
-
-	var req DeleteProjectParams
-	err = json.NewDecoder(c.Request.Body).Decode(&req)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{
-			"success": false,
-			"error":   "something went wrong...",
-		})
-		return
-	}
+	projectId := c.Query("id")
 
 	queries := database.New(db)
 	ctx := context.Background()
 	err = queries.DeleteProjectById(ctx, database.DeleteProjectByIdParams{
-		ID:     req.Id,
+		ID:     projectId,
 		UserID: userId,
 	})
 
