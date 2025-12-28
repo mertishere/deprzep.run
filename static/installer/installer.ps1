@@ -1,4 +1,4 @@
-$Target = "0.8" # latest version
+$Target = "0.9.0" # latest version
 if (-not ($args.Length -eq 0)) {
     $Target = $args[0]
 }
@@ -39,12 +39,12 @@ if (-not (Test-Path $ZepTargetFile)) {
 
 function Set-EnvVar {
     $UserPath = [Environment]::GetEnvironmentVariable("Path", "Machine")
-    if (-not ($UserPath.Split(';') -contains $ExeZepDir)) {    
+    if (-not ($UserPath.Split(';') -contains $ExeZepDir)) {
         $NewPath = $ExeZepDir + ";" + $UserPath
         [Environment]::SetEnvironmentVariable("Path", $NewPath, "Machine")
         Write-Host "$ExeZepDir added to user PATH. You may need to restart your terminal to see the change."
     }
-    if (-not ($UserPath.Split(';') -contains $ExeZigDir)) {    
+    if (-not ($UserPath.Split(';') -contains $ExeZigDir)) {
         $NewPath = $ExeZigDir + ";" + $UserPath
         [Environment]::SetEnvironmentVariable("Path", $NewPath, "Machine")
         Write-Host "$ExeZigDir added to user PATH. You may need to restart your terminal to see the change."
