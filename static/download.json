@@ -1,87 +1,172 @@
 {
   "master": {
-    "version": "0.9.0",
-    "date": "2025-12-28",
+    "version": "1.0.0",
+    "date": "2026-01-08",
     "docs": "https://github.com/XerWoho/zeP/tree/main/docs",
     "aarch64-freebsd": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_aarch64-freebsd_0.9.0.tar.xz",
-      "sha256sum": "f8e4d9de6fba77cf9f1b6d4a40e68e11e6d17d44d2133dcaf04b278f5d9c2913",
-      "size": "2858616"
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-freebsd_1.0.0.tar.xz",
+      "sha256sum": "7addde46be4dde9fefff63b0405cc44601830919aea37152ba473236f144fbf8",
+      "size": "3121516"
     },
     "aarch64-linux": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_aarch64-linux_0.9.0.tar.xz",
-      "sha256sum": "ec6f6947a4c8ba7263095528f281fe765e9157896d3c643403e1beb45c677641",
-      "size": "3036076"
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-linux_1.0.0.tar.xz",
+      "sha256sum": "0e5f1736c83c7cd70d0117c2d5e3f3c84731e6a00cf70f35db4f9ea55be62562",
+      "size": "3303088"
     },
     "aarch64-macos": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_aarch64-macos_0.9.0.tar.xz",
-      "sha256sum": "e0ed6f0f2c4399ca40f93ac420a13949e67ff0369cdeae077bee1140c6f613c6",
-      "size": "657528"
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-macos_1.0.0.tar.xz",
+      "sha256sum": "7cae61571613e47fa6439a6173faaaf2393b6818979d02b16828f80a30cb98c6",
+      "size": "719460"
     },
     "aarch64-netbsd": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_aarch64-netbsd_0.9.0.tar.xz",
-      "sha256sum": "53842fc33f809cb87328a106db7295c86bd89993baf380aa0f404142669d9584",
-      "size": "2847696"
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-netbsd_1.0.0.tar.xz",
+      "sha256sum": "9ea3c89c3b1bdb81f68c3e10719c3535315e1af786608cd261271cc0893f7f0b",
+      "size": "3111012"
     },
     "aarch64-windows": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_aarch64-windows_0.9.0.zip",
-      "sha256sum": "ec8fd0f1244cefb204185fed1364f6b94cb61bef4d9e37de6776752601f2c989",
-      "size": "1064395"
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-windows_1.0.0.zip",
+      "sha256sum": "4ad9c34af2ad6693c9cd87aad6beb7955b4d2b1cbf8c0e1534c45f6b9dceb277",
+      "size": "1080031"
     },
     "arm-freebsd": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_arm-freebsd_0.9.0.tar.xz",
-      "sha256sum": "a1c0938a0e16a2c2b4d1ea02325576c0e82a520b343691b5a09b409e94e1b9b0",
-      "size": "3589264"
+      "tarball": "https://zep.run/releases/1.0.0/zep_arm-freebsd_1.0.0.tar.xz",
+      "sha256sum": "31bf83af227c1d2027e077af3c0f08c79f397f08a582b933f75399be430dcdd5",
+      "size": "3855660"
     },
     "arm-linux": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_arm-linux_0.9.0.tar.xz",
-      "sha256sum": "11a092cbf01edf4e27b972948e1ec763ec4d21388ea8eeabe657ee113dbb0408",
-      "size": "3774236"
+      "tarball": "https://zep.run/releases/1.0.0/zep_arm-linux_1.0.0.tar.xz",
+      "sha256sum": "263c0438b42223b61bc09ab5f76983cd39f14f6124d5afa9c9701076a134a5b2",
+      "size": "4032540"
     },
     "arm-netbsd": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_arm-netbsd_0.9.0.tar.xz",
-      "sha256sum": "7677d28cc74ce0ee7c76968f55c0f9e8c8577cb109dcb0af1d15241b8dc834c4",
-      "size": "3590688"
+      "tarball": "https://zep.run/releases/1.0.0/zep_arm-netbsd_1.0.0.tar.xz",
+      "sha256sum": "e8e4b72c8a68db2a447f6e178e02f03e86ea6439c1e1179b75aa9a45aec6e98d",
+      "size": "3861848"
     },
     "x86-linux": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_x86-linux_0.9.0.tar.xz",
-      "sha256sum": "8b2fe9471d63b8de5ef5e17741c2aa3dcb1e6a820dc31f4b76f4be33532eb040",
-      "size": "3634456"
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86-linux_1.0.0.tar.xz",
+      "sha256sum": "142f222cab7bc6cd05129fa61e71ac895316a28bde3327b8a896965c27f2535d",
+      "size": "3904600"
     },
     "x86-netbsd": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_x86-netbsd_0.9.0.tar.xz",
-      "sha256sum": "d91c1c375f24c2325557ec0d03121cceb8c04ae23a75fb804e1c296922b42f86",
-      "size": "3546892"
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86-netbsd_1.0.0.tar.xz",
+      "sha256sum": "47be90d929112fbd4da42ce70d3e607a063bb992e1db816232982934bf36e27c",
+      "size": "3829492"
     },
     "x86-windows": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_x86-windows_0.9.0.zip",
-      "sha256sum": "2aad265d3eff4ed7bd5146dbda40c7dc3ebb095182e6c1f20571241e44384d0e",
-      "size": "1209035"
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86-windows_1.0.0.zip",
+      "sha256sum": "42ae4ed75b1db077c1803cca8fb65094ba7a20728059b9ad3e231ccc42f02ef9",
+      "size": "1306332"
     },
     "x86_64-freebsd": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_x86_64-freebsd_0.9.0.tar.xz",
-      "sha256sum": "1e1ad94ccd749ad6de836cac1304c5c9694974d52edb34295f163b6ffea6f812",
-      "size": "3002792"
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-freebsd_1.0.0.tar.xz",
+      "sha256sum": "dfa84218556e94029117d4bb063ac1b1a8a6b5e9484a678d3055e70488bfbe65",
+      "size": "3271176"
     },
     "x86_64-linux": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_x86_64-linux_0.9.0.tar.xz",
-      "sha256sum": "37d09229bcec6efaa3b66d0143b27d305040b34ecbc51089169fe0db6919d676",
-      "size": "3153928"
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-linux_1.0.0.tar.xz",
+      "sha256sum": "e7d716524f3cb59eac7ebbcd5afd09cdeee7493a83849407ee3172dd983721d9",
+      "size": "3427952"
     },
     "x86_64-macos": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_x86_64-macos_0.9.0.tar.xz",
-      "sha256sum": "d6f77bd81285eded86cfc080bfc535ad515ba14b08acb1668bd5d0aea6f32e74",
-      "size": "780380"
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-macos_1.0.0.tar.xz",
+      "sha256sum": "07acc4a4e781ca025d28e9d0c664769a2ccf789e76e25f1aac90ac68eff5f8c0",
+      "size": "852284"
     },
     "x86_64-netbsd": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_x86_64-netbsd_0.9.0.tar.xz",
-      "sha256sum": "4aba56144c0121d0894a7c9b1c57fa24108b2caac5fe87b96ae892a66aee4b4f",
-      "size": "2987024"
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-netbsd_1.0.0.tar.xz",
+      "sha256sum": "ef79beda6932e66e154fa543c221983a11e5bafed101d13597cd5abd213a4669",
+      "size": "3255588"
     },
     "x86_64-windows": {
-      "tarball": "https://zep.run/releases/0.9.0/zep_x86_64-windows_0.9.0.zip",
-      "sha256sum": "c5c4497924c8b11d7808651517ecb541515dee6d1b31b5b8a83eab921985f792",
-      "size": "1149360"
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-windows_1.0.0.zip",
+      "sha256sum": "37ac103a05a629690668d5adc905686dd4daa812179328ebcb2d686a9ce136ad",
+      "size": "1165492"
+    }
+  },
+  "1.0.0": {
+    "version": "1.0.0",
+    "date": "2026-01-08",
+    "docs": "https://github.com/XerWoho/zeP/tree/main/docs",
+    "aarch64-freebsd": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-freebsd_1.0.0.tar.xz",
+      "sha256sum": "7addde46be4dde9fefff63b0405cc44601830919aea37152ba473236f144fbf8",
+      "size": "3121516"
+    },
+    "aarch64-linux": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-linux_1.0.0.tar.xz",
+      "sha256sum": "0e5f1736c83c7cd70d0117c2d5e3f3c84731e6a00cf70f35db4f9ea55be62562",
+      "size": "3303088"
+    },
+    "aarch64-macos": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-macos_1.0.0.tar.xz",
+      "sha256sum": "7cae61571613e47fa6439a6173faaaf2393b6818979d02b16828f80a30cb98c6",
+      "size": "719460"
+    },
+    "aarch64-netbsd": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-netbsd_1.0.0.tar.xz",
+      "sha256sum": "9ea3c89c3b1bdb81f68c3e10719c3535315e1af786608cd261271cc0893f7f0b",
+      "size": "3111012"
+    },
+    "aarch64-windows": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_aarch64-windows_1.0.0.zip",
+      "sha256sum": "4ad9c34af2ad6693c9cd87aad6beb7955b4d2b1cbf8c0e1534c45f6b9dceb277",
+      "size": "1080031"
+    },
+    "arm-freebsd": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_arm-freebsd_1.0.0.tar.xz",
+      "sha256sum": "31bf83af227c1d2027e077af3c0f08c79f397f08a582b933f75399be430dcdd5",
+      "size": "3855660"
+    },
+    "arm-linux": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_arm-linux_1.0.0.tar.xz",
+      "sha256sum": "263c0438b42223b61bc09ab5f76983cd39f14f6124d5afa9c9701076a134a5b2",
+      "size": "4032540"
+    },
+    "arm-netbsd": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_arm-netbsd_1.0.0.tar.xz",
+      "sha256sum": "e8e4b72c8a68db2a447f6e178e02f03e86ea6439c1e1179b75aa9a45aec6e98d",
+      "size": "3861848"
+    },
+    "x86-linux": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86-linux_1.0.0.tar.xz",
+      "sha256sum": "142f222cab7bc6cd05129fa61e71ac895316a28bde3327b8a896965c27f2535d",
+      "size": "3904600"
+    },
+    "x86-netbsd": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86-netbsd_1.0.0.tar.xz",
+      "sha256sum": "47be90d929112fbd4da42ce70d3e607a063bb992e1db816232982934bf36e27c",
+      "size": "3829492"
+    },
+    "x86-windows": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86-windows_1.0.0.zip",
+      "sha256sum": "42ae4ed75b1db077c1803cca8fb65094ba7a20728059b9ad3e231ccc42f02ef9",
+      "size": "1306332"
+    },
+    "x86_64-freebsd": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-freebsd_1.0.0.tar.xz",
+      "sha256sum": "dfa84218556e94029117d4bb063ac1b1a8a6b5e9484a678d3055e70488bfbe65",
+      "size": "3271176"
+    },
+    "x86_64-linux": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-linux_1.0.0.tar.xz",
+      "sha256sum": "e7d716524f3cb59eac7ebbcd5afd09cdeee7493a83849407ee3172dd983721d9",
+      "size": "3427952"
+    },
+    "x86_64-macos": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-macos_1.0.0.tar.xz",
+      "sha256sum": "07acc4a4e781ca025d28e9d0c664769a2ccf789e76e25f1aac90ac68eff5f8c0",
+      "size": "852284"
+    },
+    "x86_64-netbsd": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-netbsd_1.0.0.tar.xz",
+      "sha256sum": "ef79beda6932e66e154fa543c221983a11e5bafed101d13597cd5abd213a4669",
+      "size": "3255588"
+    },
+    "x86_64-windows": {
+      "tarball": "https://zep.run/releases/1.0.0/zep_x86_64-windows_1.0.0.zip",
+      "sha256sum": "37ac103a05a629690668d5adc905686dd4daa812179328ebcb2d686a9ce136ad",
+      "size": "1165492"
     }
   },
   "0.9.0": {
