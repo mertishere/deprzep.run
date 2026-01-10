@@ -35,7 +35,7 @@ func AuthVerifyRoute(c *gin.Context) {
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"success": false,
-			"error":   "something went wrong... parsing",
+			"error":   "something went wrong...",
 		})
 		return
 	}
@@ -60,7 +60,7 @@ func AuthVerifyRoute(c *gin.Context) {
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"success": false,
-			"error":   "something went wrong... found",
+			"error":   "something went wrong...",
 		})
 		return
 	}
@@ -72,15 +72,48 @@ func AuthVerifyRoute(c *gin.Context) {
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"success": false,
-			"error":   "something went wrong... c",
+			"error":   "something went wrong...",
 		})
+		return
+	}
+
+	thenDate, err := time.Parse("2006-01-02", queriedUserVerify.CreatedAt)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"success": false,
+			"error":   "something went wrong...",
+		})
+		return
+	}
+
+	var tenMinutesMilli int64
+	tenMinutesMilli = 1000 * 60 * 10
+	nowDate := time.Now()
+	if nowDate.UnixMilli() > thenDate.UnixMilli()+tenMinutesMilli {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"success": false,
+			"error":   "code expired...",
+		})
+		err = queries.DeleteVerification(
+			ctx,
+			database.DeleteVerificationParams{
+				UserID: queriedUser.ID,
+				Code:   verificationCode,
+			},
+		)
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"success": false,
+				"error":   "something went wrong...",
+			})
+		}
 		return
 	}
 
 	if queriedUserVerify.UserID != queriedUser.ID {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"success": false,
-			"error":   "something went wrong... m",
+			"error":   "something went wrong...",
 		})
 		return
 	}
