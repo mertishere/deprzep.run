@@ -21,7 +21,7 @@ fi
 
 
 
-TARGET="1.0.1"
+TARGET="1.0.2"
 if [ $# -gt 0 ]; then
     TARGET="$1"
 fi
